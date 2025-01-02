@@ -1,11 +1,21 @@
 
-
+import { Routes, Route } from "react-router-dom";
+import SignupPage from "./pages/SignupPage";
+import LoginPage from "./pages/LoginPage";
+import VerificationEmailPage from "./pages/VerificationEmailPage";
+import { Toaster } from "./components/ui/toaster";
 function App() {
 
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello World</h1>
-    </div>
+   <div className="">
+    <Routes>
+      <Route path="/" element={"Home"} />
+      <Route path="/signup" element={<SignupPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/verify-email" element={<VerificationEmailPage />} />
+    </Routes>
+    <Toaster />
+   </div>
   )
 }
 
